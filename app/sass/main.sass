@@ -1,0 +1,699 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  color: $text
+  background: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+.color-accent
+  color: $accent
+
+.logo
+  font-size: 42px
+  font-weight: 800
+  color: $text
+  border-bottom: 8px solid $accent
+  position: relative
+  margin: 0 20px 0 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -8px
+    height: 8px
+    width: 110px
+    background: $text
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  outline: none
+  box-sizing: border-box
+  cursor: pointer
+  transition: .3s ease
+  border: none
+  font-family: $default-font
+  font-size: 16px
+  font-weight: 600
+  height: 40px
+  width: 100%
+  text-transform: uppercase
+
+.btn-accent
+  background: #FF7B69
+  color: #fff
+  border-radius: 50px
+  box-shadow: 0 10px 10px rgba(228, 115, 99, 0.2)
+  max-width: 240px
+  &:hover
+    background: #EC6C5A
+    box-shadow: 0 10px 10px rgba(228, 115, 99, 0.2)
+
+
+.phone-wrapper
+  display: flex
+  align-items: center
+  margin: 0 20px 0 0
+
+.phone
+  font-size: 18px
+  font-weight: 600
+  color: $text
+  &:hover
+    color: $accent
+
+.whatsapp
+  margin: 0 20px 0 0
+  width: 25px
+  height: 25px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.links
+  text-decoration: underline
+  font-size: 14px
+  font-weight: 500
+  color: $accent
+  &:hover
+    text-decoration: none
+
+.container
+  max-width: 1200px
+  padding: 0 15px
+  width: 100%
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  position: relative
+
+h1
+  text-align: center
+  margin: 0 auto 20px
+  width: 100%
+  max-width: 970px
+  font-size: 42px
+  font-weight: bold
+
+h2
+  text-align: center
+  width: 100%
+  position: relative
+  font-size: 42px
+  font-weight: bold
+  padding: 0 0 20px
+  margin: 69px auto 30px
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%,0)
+    width: 109px
+    height: 8px
+    background: $accent
+
+
+h3
+  font-size: 24px
+  font-weight: 600
+  width: 100%
+  text-align: center
+
+
+.description-title
+  text-align: center
+  width: 100%
+  font-size: 24px
+  font-weight: 600
+  max-width: 770px
+  margin: 0 auto 35px
+
+.w-100
+  width: 100%
+
+form
+  width: 100%
+  max-width: 230px
+  margin: 0 auto
+  button
+    margin: 19px auto 0
+
+label
+  display: block
+  width: 100%
+  margin: 0 0 10px
+  position: relative
+  &:last-child
+    margin: 0
+
+input
+  width: 100%
+  height: 40px
+  box-sizing: border-box
+  padding: 0 10px 0  37px
+  outline: none
+  border: none
+    radius: 50px
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.05)
+  font-family: $default-font
+  font-size: 14px
+  color: #54595E
+  background: #F3F5F9
+  text-transform: uppercase
+  &::placeholder
+    color: #54595E
+
+.icon-input
+  position: absolute
+  top: 50%
+  transform: translate(0,-50%)
+  left: 15px
+
+.consent
+  margin: 6px auto 0
+  text-align: center
+  width: 100%
+  font-size: 10px
+  font-weight: 500
+  a
+    display: inline-block
+
+.links-grey
+  color: $text
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+//header
+header
+  padding: 14px 0
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+  .container
+    align-items: center
+    justify-content: space-between
+
+.description-company
+  max-width: 240px
+  width: 100%
+  margin: 6px auto 0 0
+
+
+//main
+main
+  padding: 136px 0 86px
+  background: #F3F5F9
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    opacity: .1
+    background: url("../img/bg1.jpeg") no-repeat center
+      size: cover
+
+.main-wrapper
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+
+.main-img
+  max-width: 370px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.list-advantages
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.advantages-box
+  display: flex
+  align-items: center
+  margin: 0 0 26px
+  font-size: 18px
+  font-weight: 600
+  &:last-child
+    margin: 0
+
+.list-advantages__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 51px
+  margin: 0 13px 0 0
+
+.callback-box
+  background: #fff
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1)
+  width: 370px
+  padding: 29px 70px 34px
+  p
+    text-align: center
+    width: 100%
+    margin: 0 auto 17px
+
+.advantages-line
+  width: 100%
+  margin: 70px auto 0
+  max-width: 770px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+
+.advantages-line__box
+  display: flex
+  align-items: center
+  font-size: 18px
+  font-weight: 600
+  p
+    max-width: 170px
+
+.advantages-line__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  width: 70px
+  height: 70px
+  min-width: 70px
+  background: $text
+  padding: 14px 13px
+  margin: 0 20px 0 0
+
+  
+//footer
+footer
+  background: #F3F5F9
+  padding: 18px 0
+  font-size: 14px
+  font-weight: 500
+  .container
+    align-items: center
+    justify-content: space-between
+
+.copyright
+  font-weight: 600
+  margin: 0 40px 0 0
+
+.developer
+  margin: 0 0 0 auto
+  display: flex
+  align-items: center
+  a
+    margin: 0 0 0 5px
+
+
+.modal__div
+  position: fixed
+  max-width: 430px
+  width: 100%
+  height: 100%
+  top: 45%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 101
+  overflow: auto
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  display: none
+  opacity: 0
+  input
+    background: #fff
+  h2
+    font-size: 24px
+    margin: 0 auto 19px
+    padding: 0 0 24px
+    &:before
+      height: 6px
+  .box-text
+    font-size: 10px
+    line-height: 13px
+    p
+      margin: 0 0 10px
+      &:last-child
+        margin: 0
+    h4
+      font-weight: 600
+      margin: 0 0 10px
+
+.form-img
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 35px auto 5px
+
+#thanks__modal
+  .subtitle
+    max-width: 370px
+    line-height: 26px
+
+.modal__close
+  position: absolute
+  right: 20px
+  top: 20px
+  width: 15px
+  height: 15px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+
+.modal__wrapper
+  background: #F3F5F9
+  width: 100%
+  height: auto
+  overflow: auto
+  margin: 50px auto
+  padding: 66px 30px 45px
+  box-sizing: border-box
+  position: relative
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15)
+
+
+
+.overlay
+  z-index: 100
+  position: fixed
+  background-color: #000
+  opacity: 0.8
+  -moz-opacity: 0.8
+  filter: alpha(opacity = 80)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+//.productions
+.productions-wrapper
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  margin: 80px auto 0
+
+.productions-box
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 371px
+  width: 100%
+  margin: 0 30px 80px 0
+  &:last-child
+    margin: 0 0 80px
+  h3
+    margin: 0 auto 25px
+    span
+      display: block
+
+.productions-box__img
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: 187px
+  margin: 0 auto 60px
+
+.table
+  width: 100%
+  display: flex
+  align-items: stretch
+  background: #F3F5F9
+  font-size: 18px
+  font-weight: 500
+  text-align: center
+  height: 120px
+
+.table-title
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: 600
+  width: 130px
+  background: #E3E6ED
+
+.table-body
+  width: calc(100% - 130px)
+  display: flex
+  align-items: stretch
+  .col
+    width: 50%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+    border:
+      right: 1px solid #E3E6ED
+    &:last-child
+      border: none
+  .td
+    width: 100%
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    border:
+      bottom: 1px solid #E3E6ED
+    &:last-child
+      border: none
+
+//areas-of-use
+.areas-of-use
+  background: #54595E
+  position: relative
+  color: #fff
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: url("../img/bg2.jpeg") no-repeat center
+      size: cover
+    opacity: .05
+  h2
+    margin: 69px auto 58px
+    &:before
+      background: #fff
+
+.areas-of-use__wrapper
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+
+.areas-of-use__box
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  font-size: 18px
+  font-weight: 600
+  margin: 0 0 79px
+  .number
+    position: absolute
+    left: -15px
+    top: -10px
+    font-size: 42px
+    font-weight: normal
+
+.areas-of-use__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  background: #fff
+  padding: 26px 18px
+  margin: 0 auto 12px
+  width: 130px
+  height: 130px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    border: 5px solid #F3F5F9
+    width: 70px
+    height: 70px
+  img
+    position: relative
+    z-index: 1
+
+//about
+.about
+  padding: 0 0 60px
+
+.about-wrapper
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+
+.maps
+  width: 370px
+  height: 300px
+  iframe
+    width: 100%
+    height: 100%
+
+.about-box
+  width: 370px
+  .box-text
+    font-weight: 500
+    margin: 7px 0 18px
+    line-height: 26px
+  h3
+    text-align: left
+
+.contacts-wrapper
+  display: flex
+  align-items: flex-start
+  .whatsapp
+    &:last-child
+      margin: 0
+
+.contacts-box
+  margin: 0 26px 0 0
+
+.mail
+  font-size: 14px
+  font-weight: 500
+
+.subtitle
+  text-align: center
+  margin: 9px auto 20px
+  font-size: 14px
+  font-weight: 500
+  max-width: 230px
+  width: 100%
+
+.btn-scroll-top
+  position: fixed
+  z-index: 4
+  background: #E3E6ED
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  box-shadow: 0px 2px 3px rgba(84, 89, 94, 0.3)
+  bottom: 120px
+  right: 135px
+  cursor: pointer
+  svg
+    transition: .3s ease
+    stroke: $text
+  &:hover
+    svg
+      stroke: $accent
+
+@import "media"
+// Всегда в конце
